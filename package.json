@@ -1,0 +1,25 @@
+{
+  "name": "snippets",
+  "version": "1.0.0",
+  "description": "my web snippets for atom editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenysHnatiuk/snippets.git"
+  },
+  "keywords": [
+    "atom",
+    "cson",
+    "web",
+    "snippets"
+  ],
+  "author": "Den Hnatiuk <denys.hnatiuk@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenysHnatiuk/snippets/issues"
+  },
+  "homepage": "https://github.com/DenysHnatiuk/snippets#readme"
+}
