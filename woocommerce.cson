@@ -82,3 +82,15 @@
               remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
           }
         """
+  "Display product`s category in product item":
+        "prefix":"woo_add_product_cat"
+        "body":"""
+          // Display product`s category in product item
+          // get_categories( $separator, $before, $after )
+          <?php
+            echo $product->get_categories(
+              ', ',
+              '<span class="posted_in">' . _n( 'Category:', 'Categories:', sizeof( get_the_terms( $post->ID, 'product_cat' ) ), 'woocommerce' ) . ' ',
+              '.</span>' ); 
+          ?>
+        """
