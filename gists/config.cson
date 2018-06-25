@@ -1,0 +1,33 @@
+"*":
+  core:
+    audioBeep: false
+    automaticallyUpdate: false
+    disabledPackages: [
+      "ftp-remote-edit"
+      "php-cs-fixer"
+      "platformio-ide-terminal"
+      "atom-autocomplete-php"
+    ]
+    projectHome: "e:\\projects"
+    telemetryConsent: "no"
+    themes: [
+      "atom-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+    uriHandlerRegistration: "always"
+    useProxySettingsWhenCallingApm: false
+  editor:
+    fontSize: 16
+    tabType: "soft"
+  "exception-reporting":
+    userId: "b109de36-7e79-4f95-82e4-ad08db6ee77e"
+  "linter-ui-default":
+    gutterPosition: "Left"
+    panelHeight: 300
+  "platformio-ide-terminal":
+    toggles:
+      autoClose: true
+  "tree-view":
+    hideVcsIgnoredFiles: false
+  welcome:
+    showOnStartup: false

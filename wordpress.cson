@@ -75,3 +75,36 @@
         	) );
         }
       """
+    "Background imaged wp thumbnails":
+        "prefix":"wp_bg_thumbnails"
+        "body":"""
+            ?><div class="thumbnail"  style="background: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(
+            <?php
+              	if( has_post_thumbnail() ) {
+                  	echo get_the_post_thumbnail_url('','full-thumbnail');
+                }else {
+                    echo get_bloginfo('template_url').'/static/images/default-thumbnail.jpg';
+                }
+            ?>);background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center;">
+        """
+    "MultiPostThumbnails":
+        "prefix":"wp_plugin_multithumbnails"
+        "body":"""
+          if (class_exists('MultiPostThumbnails')) : ?>
+            <div class="catalogue-galary">
+            <?php if(MultiPostThumbnails::has_post_thumbnail('post', 'thumbnail2')) { ?>
+                <div class="catalogue-thumbnail" style="background: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%),url('<?php echo  MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), "thumbnail2", NULL, "full-thumbnail"); ?>'); background-repeat: no-repeat; background-size: 200%; background-position: center; filter:grayscale(1)"></div>
+            <?php} if(MultiPostThumbnails::has_post_thumbnail('post', 'thumbnail3')) { ?>
+                <div class="catalogue-thumbnail" style="background: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%),url('<?php echo  MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), "thumbnail3", NULL, "full-thumbnail"); ?>'); background-repeat: no-repeat; background-size: 200%; background-position: center; filter:grayscale(1)"></div>
+            <?php} if(MultiPostThumbnails::has_post_thumbnail('post', 'thumbnail4')) { ?>
+                <div class="catalogue-thumbnail" style="background: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%),url('<?php echo  MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), "thumbnail4", NULL, "full-thumbnail"); ?>'); background-repeat: no-repeat; background-size: 200%; background-position: center; filter:grayscale(1)"></div>
+            <?php} if(MultiPostThumbnails::has_post_thumbnail('post', 'thumbnail5')) { ?>
+                <div class="catalogue-thumbnail" style="background: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%),url('<?php echo  MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), "thumbnail5", NULL, "full-thumbnail"); ?>'); background-repeat: no-repeat; background-size: 200%; background-position: center; filter:grayscale(1)"></div>
+            <?php} if(MultiPostThumbnails::has_post_thumbnail('post', 'thumbnail6')) { ?>
+                <div class="catalogue-thumbnail" style="background: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%),url('<?php echo  MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), "thumbnail6", NULL, "full-thumbnail"); ?>'); background-repeat: no-repeat; background-size: 200%; background-position: center; filter:grayscale(1)"></div>
+            <?php} if(MultiPostThumbnails::has_post_thumbnail('post', 'thumbnail7')) { ?>
+                <div class="catalogue-thumbnail" style="background: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%),url('<?php echo  MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), "thumbnail7", NULL, "full-thumbnail"); ?>'); background-repeat: no-repeat; background-size: 200%; background-position: center; filter:grayscale(1)"></div>
+            <?php } ?>
+            </div>
+  		    <?php	endif;	?>
+        """
