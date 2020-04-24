@@ -1,7 +1,7 @@
 {
   "name": "snippets",
-  "version": "1.0.0",
-  "description": "my web snippets for atom editor",
+  "version": "2.0.0",
+  "description": "my snippets",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,8 +11,6 @@
     "url": "git+https://github.com/DenysHnatiuk/snippets.git"
   },
   "keywords": [
-    "atom",
-    "cson",
     "web",
     "snippets"
   ],
