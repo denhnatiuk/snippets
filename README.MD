@@ -13,5 +13,6 @@
 ==================
 [Algorithms](./algorithms/readme.md)
 [Configs](./configs/readme.md)
+[Patterns](./Patterns/readme.md)
 [Utils](./Utils/readme.md)
 ==================

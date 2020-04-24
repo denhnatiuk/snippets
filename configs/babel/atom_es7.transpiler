@@ -1,0 +1,10 @@
+# add to package.json
+{
+"devDependencies": {
+    "@atom/babel7-transpiler": "^1.0.0-1",
+  },
+"atomTranspilers": [{
+    "glob": "**/*.babel",
+    "transpiler": "@atom/babel7-transpiler"
+  }]
+}
