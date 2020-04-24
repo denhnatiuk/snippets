@@ -1,0 +1,16 @@
+# rewrite http to https
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# deny access to files on server
+#<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+#	Order Allow,Deny
+# Deny from all
+#</FilesMatch>
+
+# disable directory browsing
+Options All -Indexes
+#
