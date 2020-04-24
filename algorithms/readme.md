@@ -8,6 +8,17 @@
  -->
 ###Table of contents
 ==================
+ [Clustering](./Clustering/)
+ [Data Compression](./Datacompression)
+ [Math](./Math)
+ - Karatsuba multiplication of big numbers
+ - Euclidian Math
+ - Primality Math
+ [Polyndrome](./polyndrome.js)
+ [Search](./Search)
+ - List Search
+ - Graph Search
+ - Structures
  [Sort](./Sort/)
  - bubble sort
  - heap sort
@@ -15,17 +26,7 @@
  - merge sort
  - quick sort
  - selection sort
- [Polyndrome](./polyndrome.js)
- [Conditional import ES7](./conditional_import.es7.js)
-Clustering
 
-List Search
-
-Graph Search
-
-Math
-
-Data Compression
 
 Security
 
