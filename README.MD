@@ -12,4 +12,6 @@
 #Table of contents
 ==================
 [Algorithms](./algorithms/readme.md)
+[Configs](./configs/readme.md)
+[Utils](./Utils/readme.md)
 ==================
