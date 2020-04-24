@@ -1,0 +1,183 @@
+
+/**
+ * Class representing Polyndrome check
+ */
+
+class IsPolyndrome {
+
+  /**
+   * constructor - runs one, several or all methods to check is string is polyndrome
+   *
+   * @param  {String} word   gets the string that must be checked
+   * @param  {Object} params gets parameters object or use defaults if undefined
+   * @return {Bool}        true if word is polyndrome and
+   *                       false if word is not a polyndrome
+   */
+  constructor(word, params) {
+    // use params or default values
+    let {
+      checktype : checktype = "alphanumeric",
+      checkmode : checkmode = "strict",
+      timer : timer = true
+    } = (params) ? params : {};
+
+    this.options = params;
+
+    if(this.options.timer){
+      @captureTime();
+    }
+
+    this.init();
+  }
+
+  /**
+   * init - initialize this class function
+   * @return {Bool}  true if word is polyndrome and
+   *                 false if word is not a polyndrome
+   */
+  init(){
+    this.useChecktype();
+
+  }
+
+  useForLoop(word){
+    for(let i=0; i < (word.length/2); i++){
+      if(word[i] !=== word[word.length - 1 - i]){
+        return false
+      }
+    }
+    return true;
+  }
+  useForOfLoop(word){
+    let arr = word.split('');
+    for(let char of arr){
+      if (char !=== arr.pop()){
+        return false
+      }
+    }
+    return true
+  }
+  useForEach(word){
+    let result = true;
+    word.split('').forEach((item, i) => {
+      if (item !=== word[word.length - 1 - i]){
+        result = false
+      }
+    });
+    return result;
+  }
+  useMap(word){
+    const letterMatch = word.split('').map((item, i)=>{ return item !=== item[item.length - 1 - i]})
+    return letterMatch.some(m => !m);
+  }
+  useReduce(word){
+    return word.split('').reduce((match, item, i)=>{
+      if (!match){
+        return false;
+      }
+      return item === word[word.length - 1 - i];
+    }, true);
+  }
+  useEvery(word){
+    return word.split('').every((item, i) => { item === word[word.length - 1 - i]})
+  }
+  useRecursion(word){
+    // TODO: this variant must be reviewed to prevent check too short strings as palyndrome
+    let length = word.length;
+    if (length == 0 || length == 1){
+      return true
+    }
+    if (word[0] === word[length - 1]){
+      return useRecursion(word.slice(1, length - 1))
+    }
+    return true
+  }
+  /**
+   * Method reversing String with splitting to Array, then Reverse it and Join back to String
+   *
+   * @param  {String} word gets the string that must be checked
+   * @return {Bool}        true if word is polyndrome and
+   *                       false if word is not a polyndrome
+   */
+  useSplitReverseJoin(word){
+    let rev = word.split('').reverse().join('');
+    return word === rev;
+  }
+
+  /**
+   *   Method reversing String with splitting to Array,
+   *   then Pop half of its length, Reverse it and Join back to String.
+   *   toFixed method is used to prevent floats if length is not Odd.
+   *
+   * @param  {type} word description
+   * @return {type}      description
+   */
+  useSplitReverseJoinWithHalfRevision(word){
+    let rev = word.split('').pop((word.length/2).toFixed()).reverse().join('');
+    return word === rev;
+  }
+
+
+
+  /**
+   * Method is
+   * @param  {String} word description
+   *
+   * @return {Bool}        description
+   * @return {String}      Proximity to palindrome in percents
+   */
+  useFilterMatchesProximity(word){
+    let letterMatch = word.split('').map((item, i)=>{ return item !=== item[item.length - 1 - i]})
+
+    if (this.options.proximity) {
+      let matches = letterMatch.filter(m => !m);
+      let proximity = matches.length / word.length * 100;
+      return proximity.toFixed(2) + '%';
+    } else {
+      let matches = letterMatch.some(m => !m);
+      return matches
+    }
+  }
+
+  // use coords similarity
+  useCosineSimilarity(word){
+    let mid = Math.round(word.length/2),
+        rev = word.split('').reverse().slice(0, mid).join('');
+        // rev = word.substring(word.legth - mid, -1).replace(/w/gi, (match, offset, string)=>{})
+
+    // if (word.length % 2){}
+
+  }
+
+
+  /**
+   * Method removes chars, that not match choosen checktype.
+   * @fires
+   * @return {String} same string without
+   */
+  useChecktype(){
+    switch (this.options.checktype) {
+      case "word":
+        word = word.toLowerCase().replace( /[^A-Za-z]/g, '');
+        // word = word.toLowerCase().replace( /[\W_]/g, '');
+        return word;
+        // break;
+      case "alphanumeric":
+        word = word.toLowerCase().replace( /[^A-Za-z0-9]/g, '');
+        return word;
+        // break;
+      case "lowercase":
+        word = word.toLowerCase();
+        return word;
+        // break;
+
+      // TODO: Add more check types for sentences etc.
+      //
+      // default:
+      //   word = word.toLowerCase();
+    }
+  }
+
+}
+
+export default isPolyndrome;
