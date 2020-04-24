@@ -1,0 +1,90 @@
+class Sort {
+  constructor(...params) {
+    let {
+      src : src = null,
+      type : type = 'quickSort',
+      timer : timer = false,
+      debug : debug = false
+    } = (params) ? params : {};
+
+    ::this.options = params;
+
+    if (this.options.timer){
+      @captureTime();
+    }
+
+    ::this.init();
+  }
+  init(options){
+    // datatypeCasting(){}  -  check Input Data Type, convert to plain Array
+    // if options.src is null console error
+    // exec(options.type){}         -  execute sort algorithm
+  }
+
+
+  /**
+   * arrSortMethod - description
+   *
+   * @param  {Array} arr simpliest sorting using array sort method
+   *                     same as bubble sorting
+   * @return {Array}     returns sorted array
+   */
+  arrSortMethod(arr){
+    return arr.sort((a,b) => {a - b});
+  }
+
+  /**
+   * bubbleSort - description
+   *
+   * @param  {Array} arr description
+   * @return {Array}     returns sorted array
+   */
+  bubbleSort(arr){
+    let complete,
+        result = arr,
+        length = result.length;
+    do {
+      complete = false;
+      for (let i = 0; i < length; i++){
+        if (result[i] < result[i+1]){
+          let temp = result[i];
+          result[i] = result[i+1];
+          result[i+1] = temp;
+          complete = true;
+        }
+      }
+      --length;
+    } while (complete)
+    return result;
+  }
+
+  /**
+   * heapSort - description
+   *
+   * @param  {type} arr description
+   * @return {type}     description
+   */
+  heapSort(arr){
+
+  }
+  insertionSort(){}
+  mergeSort(){}
+  quickSort(){}
+  selectionSort(){}
+
+
+  exec(type){
+    switch (type) {
+      case 'bubbleSort':
+      case 'heapSort':
+      case 'insertionSort':
+      case 'mergeSort':
+      case 'quickSort':
+      case 'selectionSort':
+        // break;
+      default:
+        return ::this.quickSort();
+
+    }
+  }
+}

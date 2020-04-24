@@ -15,9 +15,9 @@
     "snippets"
   ],
   "author": "Den Hnatiuk <denys.hnatiuk@gmail.com>",
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE.TXT",
   "bugs": {
-    "url": "https://github.com/DenysHnatiuk/snippets/issues"
+    "url": "https://github.com/DenysHnatiuk/snippets/docs/issues"
   },
-  "homepage": "https://github.com/DenysHnatiuk/snippets#readme"
+  "homepage": "https://denyshnatiuk.github.io/snippets/"
 }

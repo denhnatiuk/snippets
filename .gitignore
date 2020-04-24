@@ -1,5 +1,6 @@
 temp
 .git
 node_modules
-.env
+*.env
 .idea
+.ref
