@@ -2,5 +2,6 @@ temp
 .git
 node_modules
 *.env
+.yarn
 .idea
 .ref
