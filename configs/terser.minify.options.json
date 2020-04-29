@@ -1,0 +1,37 @@
+{
+    parse: {
+        // parse options
+      }
+    , compress: {
+        // compress options
+      }
+    , mangle: {
+        // mangle options
+
+        properties: {
+            // mangle property options
+        }
+      }
+    , output: {
+        // output options
+      }
+    , sourceMap: {
+        // source map options
+      }
+    , ecma: {
+        value: 5,
+        default: "undefined",
+        hint: "specify one of: 5, 2015, 2016, etc."
+      }
+    , keep_classnames: false
+    , keep_fnames: false
+    , module: false
+    , nameCache: {
+        value: null,
+        hint: "null or specify a name cache object"
+      }
+    , ie8: false
+    , safari10: false
+    , toplevel: false
+    , warnings: false
+}
