@@ -9,11 +9,8 @@
 ###Table of contents
 ==================
  [Clustering](./Clustering/)
- [Data Compression](./Datacompression)
+ [Data Compression](./Data_Compression)
  [Math](./Math)
- - Karatsuba multiplication of big numbers
- - Euclidian Math
- - Primality Math
  [Polyndrome](./polyndrome.js)
  [Search](./Search)
  - List Search
