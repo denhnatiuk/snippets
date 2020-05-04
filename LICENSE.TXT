@@ -1,2 +1,1 @@
-This Augean stables are free of charge and contributes without any warranty.
-Contact author for more information.
+This code is provided on an "AS-IS” basis without warranty of any kind, either express or implied, including without limitation any implied warranties of condition, uninterrupted use, merchantability, fitness for a particular purpose, or non-infringement. Your tests and testing environments may require you to modify this code. Issues regarding this code should be submitted through GitHub. This code is not maintained.
