@@ -14,3 +14,13 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # disable directory browsing
 Options All -Indexes
 #
+
+# 301 redirect
+Redirect 301 /oldpage.html /newpage.html
+# nginx redirect tutorial https://www.bjornjohansen.com/nginx-redirect
+
+# redirect domain
+# RewriteEngine on
+# RewriteCond %{HTTP_HOST} ^oldsite.com [NC,OR]
+# RewriteCond %{HTTP_HOST} ^www.oldsite.com [NC]
+# RewriteRule ^(.*)$ https://newsite.com/$1 [L,R=301,NC]
