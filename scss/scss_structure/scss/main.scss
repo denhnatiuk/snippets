@@ -1,0 +1,43 @@
+/*=Table of contents=*/
+// thirdparty libs
+@import "lib/reset";
+@import "../lib/bootstrap/dist/css/bootstrap.min.css";
+// globals
+@import "globals/fonts";
+@import "globals/typography";
+@import "globals/colors";
+@import "globals/images";
+// blocks
+@import "blocks/siteheader";
+@import "blocks/sitefooter";
+@import "blocks/links";
+@import "blocks/forms";
+
+/*=Layouts=*/
+// @import "styles" all; // for all screens;
+@media screen and (max-width:575px) {
+  @import "layout/xs";
+}
+@media screen and (min-width:576px) {
+  @import "layout/sm";
+}
+@media screen and (min-width:768px) {
+  @import "layout/md";
+}
+@media screen and (min-width:992px) {
+  @import "layout/lg";
+}
+@media screen and (min-width:1200px) {
+  @import "layout/xl";
+}
+/*===============device oriented====================*/
+// device-pixel-ratio >2 (retina etc)
+// @media  screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+//   @import "2x";
+// }
+// @media 3d-glasses {
+//   @import "3d";
+// }
+// @media print {
+//   @import "print";
+// }

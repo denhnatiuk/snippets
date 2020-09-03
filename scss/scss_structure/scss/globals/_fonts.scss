@@ -1,0 +1,62 @@
+$proximaNova-ttf-collection: (
+  'Black',
+  'BlackIt',
+  'Bold',
+  'BoldIt',
+  'Extrabold',
+  'ExtraboldIt',
+  'Light',
+  'LightIt',
+  'Regular',
+  'RegularIt',
+  'Semibold',
+  'SemiboldIt',
+  'Thin',
+  'ThinIt'
+);
+$pt-serif-caption-web-collection: (
+  'Regular',
+  'Italic',
+);
+$exo2-collection:(
+  'Black',
+  'Bold',
+  'ExtraBold',
+  'ExtraLight',
+  'Light',
+  'Medium',
+  'Regular',
+  'SemiBold',
+  'Thin',
+);
+
+@each $font in $proximaNova-ttf-collection {
+    @font-face {
+      font-family: 'ProximaNova-#{$font}';
+      src: url("/fonts/ProximaNova-#{$font}.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+}
+@each $font in $pt-serif-caption-web-collection {
+    @font-face {
+      font-family: 'PT_Serif-Caption-Web-#{$font}';
+      src: url("/fonts/PT_Serif-Caption-Web-#{$font}.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+}
+@each $font in $exo2-collection {
+    @font-face {
+      font-family: 'Exo2-#{$font}Condensed';
+      src: url("/fonts/Exo2-#{$font}Condensed.otf");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Exo2-#{$font}Expanded';
+      src: url("/fonts/Exo2-#{$font}Expanded.otf");
+      font-weight: normal;
+      font-style: normal;
+    }
+} 

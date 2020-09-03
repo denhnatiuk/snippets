@@ -1,0 +1,38 @@
+/*=Table of contents=*/
+@import "reset";
+@import "fonts";
+@import "layout/typography";
+@import "colors";
+@import "images";
+@import "links";
+@import "forms";
+/*=Layouts=*/
+// @import "styles" all; // for all screens;
+@import "blocks/styles"; // for all screens;
+
+@media screen and (max-width:575px) {
+  @import "xs";
+}
+@media screen and (min-width:576px) {
+  @import "sm";
+}
+@media screen and (min-width:768px) {
+  @import "md";
+}
+@media screen and (min-width:992px) {
+  @import "lg";
+}
+@media screen and (min-width:1200px) {
+  @import "xl";
+}
+/*===============device oriented====================*/
+// device-pixel-ratio >2 (retina etc)
+// @media  screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+//   @import "2x";
+// }
+// @media 3d-glasses {
+//   @import "3d";
+// }
+// @media print {
+//   @import "print";
+// }
