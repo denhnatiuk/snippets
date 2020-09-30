@@ -24,6 +24,9 @@ temp
 .ref
 .git
 
+/fonts_set
+/iconic_set
+
 # src/config.js
 
 # serverless

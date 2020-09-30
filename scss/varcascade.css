@@ -1,0 +1,3 @@
+.button{
+  background-color: var(--btn-state, var(--btn-type, var(--btn-theme, blue)));
+}
