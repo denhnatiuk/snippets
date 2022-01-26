@@ -67,7 +67,7 @@ RUN echo "zend_extension=xdebug.so" > /etc/php7/conf.d/xdebug.ini && \
     echo "xdebug.idekey=PHPSTORM" >> /etc/php7/conf.d/xdebug.ini && \
     echo "xdebug.remote_log=\"/tmp/xdebug.log\"" >> /etc/php7/conf.d/xdebug.ini
 
-COPY entry.sh /entry.sh
+COPY AlpineLAMPentry.sh /entry.sh
 
 RUN chmod u+x /entry.sh
 

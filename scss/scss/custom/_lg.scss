@@ -1,0 +1,16 @@
+.format-buttons{
+  .sections-wrapper{
+    display: flex;
+    flex: 1;
+    .slider.sections{
+      width:75%;
+      padding:0;
+    }
+  }
+  .label-content-controls{
+    position: absolute!important;
+    top:475px;
+    right:75%;
+    width:25%;
+  }
+}
